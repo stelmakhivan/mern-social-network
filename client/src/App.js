@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { hot } from 'react-hot-loader/root';
 
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
@@ -27,4 +28,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(App);
