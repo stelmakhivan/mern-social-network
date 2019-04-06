@@ -62,7 +62,7 @@ router.get('/all', (req, res) => {
 // @desc    Get profile by handle
 // @access  Public
 
-router.get('/handel/:handle', (req, res) => {
+router.get('/handle/:handle', (req, res) => {
   const errors = {};
 
   Profile.findOne({ handle: req.params.handle })
