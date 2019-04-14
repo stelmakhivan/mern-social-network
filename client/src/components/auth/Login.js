@@ -24,6 +24,12 @@ class Login extends Component {
     }
   }
 
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/dashboard');
+    }
+  }
+
   onChange = () => e => {
     const { target } = e;
     this.setState({ [target.name]: target.value });
