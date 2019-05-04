@@ -181,21 +181,14 @@ router.post(
     }
 
     Profile.findOne({ user: req.user.id }).then(profile => {
-      const {
-        title,
-        company,
-        location,
-        from,
-        to,
-        current,
-        description
-      } = req.body;
       const newExp = {
-        title,
-        company,
-        location,
-        from,
-        to
+        title: req.body.title,
+        company: req.body.company,
+        location: req.body.location,
+        from: req.body.from,
+        to: req.body.to,
+        current: req.body.current,
+        description: req.body.description
       };
 
       // Add to exp array
@@ -222,21 +215,14 @@ router.post(
     }
 
     Profile.findOne({ user: req.user.id }).then(profile => {
-      const {
-        school,
-        degree,
-        fieldofstudy,
-        from,
-        to,
-        current,
-        description
-      } = req.body;
       const newEdu = {
-        school,
-        degree,
-        fieldofstudy,
-        from,
-        to
+        school: req.body.school,
+        degree: req.body.degree,
+        fieldofstudy: req.body.fieldofstudy,
+        from: req.body.from,
+        to: req.body.to,
+        current: req.body.current,
+        description: req.body.description
       };
 
       // Add to exp array
